@@ -20,10 +20,79 @@ body {
     color: #202027;
     box-sizing: border-box;
     padding-top: 196px;
+    position: relative;
+    margin-bottom: 94px;
+    background-image: url(img/header__bg_left.svg), url(img/header__bg_right.svg);
+    background-repeat: no-repeat;
+    background-position: left 63px top 94px, left 854px top -333px;
+
+    &__title {
+        width: 768px;
+        color: rgb(32, 32, 39);
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        letter-spacing: 0px;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        width: 720px;
+        color: rgb(32, 32, 39);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0px;
+        margin-bottom: 48px;
+    }
+
+    &__text_strong {
+        font-weight: 600;
+    }
+
+    &__button {
+        width: 247px;
+        height: 66px;
+        box-sizing: border-box;
+        border: 1px solid rgb(32, 32, 39);
+        border-radius: 60px;
+        background: rgb(32, 32, 39);
+        padding: 16px 28px 16px 28px;
+        font: inherit;
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 141.69%;
+        letter-spacing: 0%;
+        text-align: center;
+    }
 
     &__animated-widget {
         background-color: #BCEC30;
         height: 90px;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+    }
+}
+
+.about {
+    &__title {
+        color: rgb(255, 255, 255);
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+        letter-spacing: 0px;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        width: 788px;
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0px;
     }
 }
 
@@ -31,4 +100,12 @@ body {
     height: 150px;
     background-color: #BDED35;
     text-align: center;
+    margin-top: 144px;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0px;
+    box-sizing: border-box;
+    padding-top: 61px;
 }
