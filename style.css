@@ -3,8 +3,12 @@
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
-  background-color: #202027;
+  background-color: rgb(32, 32, 39);
   color: white;
   font-family: "Montserrat", sans-serif;
 }
@@ -17,11 +21,10 @@ body {
 .header {
   background-color: #E1FF8F;
   height: 800px;
-  color: #202027;
+  color: rgb(32, 32, 39);
   box-sizing: border-box;
   padding-top: 196px;
   position: relative;
-  margin-bottom: 94px;
   background-image: url(img/header__bg_left.svg), url(img/header__bg_right.svg);
   background-repeat: no-repeat;
   background-position: left 63px top 94px, right -488px top -333px;
@@ -63,15 +66,28 @@ body {
   letter-spacing: 0%;
   text-align: center;
 }
+.header__button:hover {
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  color: rgb(32, 32, 39);
+  transition: all 0.5s;
+}
 .header__animated-widget {
-  background-color: #BCEC30;
+  background-color: rgb(188, 236, 48);
   height: 90px;
   width: 100%;
   position: absolute;
   bottom: 0px;
 }
 
-.about__title {
+.about {
+  margin-top: 94px;
+  margin-bottom: 96px;
+  background-image: url(img/about__bg_left.svg), url(img/about__bg_right.svg);
+  background-repeat: no-repeat;
+  background-position: top 770px left 25px, top 0 right -120px;
+}
+.about__title, .games__title {
   color: rgb(255, 255, 255);
   font-size: 64px;
   font-weight: 700;
@@ -100,7 +116,7 @@ body {
 .about__game {
   width: 378px;
   border-radius: 30px;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   text-decoration: none;
 }
 .about__game_1, .about__game_3 {
@@ -137,11 +153,79 @@ body {
   margin-left: 32px;
 }
 
+.games {
+  padding-bottom: 144px;
+  background-image: url(img/games__bg_top.svg), url(img/games__bg_bottom.svg);
+  background-repeat: no-repeat;
+  background-position: top 47px right 45px, bottom 45px right 65px;
+}
+.games__title {
+  margin-bottom: 72px;
+}
+.games__content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.games__card {
+  height: 500px;
+  width: 1200px;
+  border-radius: 30px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+.games__card:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+.games__wrapper {
+  width: 600px;
+  box-sizing: border-box;
+  padding: 48px;
+}
+.games__game-title {
+  color: rgb(32, 32, 39);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+  letter-spacing: 0px;
+  margin-bottom: 24px;
+}
+.games__desc {
+  color: rgb(32, 32, 39);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  margin-bottom: 36px;
+}
+.games__button {
+  border: 1px solid rgb(32, 32, 39);
+  width: 247px;
+  height: 66px;
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  font: inherit;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  letter-spacing: 0%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 16px 28px 16px 28px;
+}
+.games__button:hover {
+  border: 1px solid rgb(0, 0, 0);
+  background-color: #fff;
+  color: rgb(32, 32, 39);
+  transition: all 0.5s;
+}
+
 .footer {
   height: 150px;
   background-color: #BDED35;
   text-align: center;
-  margin-top: 144px;
   color: rgb(0, 0, 0);
   font-size: 24px;
   font-weight: 600;

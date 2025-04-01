@@ -3,9 +3,14 @@
     padding: 0;
 }
 
+html,
 body {
-    background-color: #202027;
-    color: white;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: $lighter-black;
+    color: $white;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -15,34 +20,27 @@ body {
 }
 
 .header {
-    background-color: #E1FF8F;
+    background-color: rgb(225, 255, 143);
     height: 800px;
-    color: #202027;
+    color: $lighter-black;
     box-sizing: border-box;
     padding-top: 196px;
     position: relative;
-    margin-bottom: 94px;
     background-image: url(img/header__bg_left.svg), url(img/header__bg_right.svg);
     background-repeat: no-repeat;
     background-position: left 63px top 94px, right -488px top -333px;
 
     &__title {
         width: 768px;
-        color: rgb(32, 32, 39);
-        font-size: 64px;
-        font-weight: 700;
-        line-height: 78px;
-        letter-spacing: 0px;
+        color: $lighter-black;
+        @extend %header-font;
         margin-bottom: 24px;
     }
 
     &__text {
         width: 720px;
-        color: rgb(32, 32, 39);
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 32px;
-        letter-spacing: 0px;
+        color: $lighter-black;
+        @extend %desc-font;
         margin-bottom: 48px;
     }
 
@@ -54,21 +52,25 @@ body {
         width: 247px;
         height: 66px;
         box-sizing: border-box;
-        border: 1px solid rgb(32, 32, 39);
+        border: 1px solid $lighter-black;
         border-radius: 60px;
-        background: rgb(32, 32, 39);
+        background: $lighter-black;
         padding: 16px 28px 16px 28px;
         font: inherit;
-        color: rgb(255, 255, 255);
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 141.69%;
-        letter-spacing: 0%;
+        color: $white;
+        @extend %button-font;
         text-align: center;
     }
 
+    &__button:hover {
+        border: 1px solid $pure-black;
+        background-color: $white;
+        color: $lighter-black;
+        transition: all 0.5s;
+    }
+
     &__animated-widget {
-        background-color: #BCEC30;
+        background-color: rgb(188, 236, 48);
         height: 90px;
         width: 100%;
         position: absolute;
@@ -77,26 +79,27 @@ body {
 }
 
 .about {
+    margin-top: 94px;
+    margin-bottom: 96px;
+    background-image: url(img/about__bg_left.svg), url(img/about__bg_right.svg);
+    background-repeat: no-repeat;
+    background-position: top 770px left 25px, top 0 right -120px;
+
     &__title {
-        color: rgb(255, 255, 255);
-        font-size: 64px;
-        font-weight: 700;
-        line-height: 78px;
-        letter-spacing: 0px;
+        color: $white;
+        @extend %header-font;
         margin-bottom: 24px;
     }
 
     &__text {
         width: 788px;
-        color: rgb(255, 255, 255);
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 32px;
-        letter-spacing: 0px;
+        color: $white;
+        @extend %desc-font;
         margin-bottom: 72px;
     }
 
-    &__content-wrapper_1, &__content-wrapper_2 {
+    &__content-wrapper_1,
+    &__content-wrapper_2 {
         display: flex;
         flex-direction: row;
         gap: 32px;
@@ -110,19 +113,22 @@ body {
     &__game {
         width: 378px;
         border-radius: 30px;
-        background-color: #fff;
+        background-color: $white;
         text-decoration: none;
     }
 
-    &__game_1, &__game_3 {
+    &__game_1,
+    &__game_3 {
         height: 473px;
     }
 
-    &__game_2, &__game_5 {
+    &__game_2,
+    &__game_5 {
         height: 512px;
     }
 
-    &__game_4, &__game_6 {
+    &__game_4,
+    &__game_6 {
         height: 551px;
     }
 
@@ -132,10 +138,10 @@ body {
 
     &__number-tag {
         border-radius: 52.58px;
-        background: rgb(247, 247, 247); 
+        background: rgb(247, 247, 247);
         margin-left: 32px;
         margin-bottom: 16px;
-        color: rgb(32, 32, 39);
+        color: $lighter-black;
         font-size: 16px;
         font-weight: 500;
         line-height: 110%;
@@ -145,7 +151,7 @@ body {
     }
 
     &__game-title {
-        color: rgb(32, 32, 39);
+        color: $lighter-black;
         font-size: 32px;
         font-weight: 700;
         line-height: 39px;
@@ -154,12 +160,84 @@ body {
     }
 }
 
+.games {
+    padding-bottom: 144px;
+    background-image: url(img/games__bg_top.svg), url(img/games__bg_bottom.svg);
+    background-repeat: no-repeat;
+    background-position: top 47px right 45px, bottom 45px right 65px;
+
+    &__title {
+        @extend %header-font;
+        margin-bottom: 72px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__card {
+        height: 500px;
+        width: 1200px;
+        border-radius: 30px;
+        background-color: $white;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__card:nth-of-type(even) {
+        flex-direction: row-reverse;
+    }
+
+    &__wrapper {
+        width: 600px;
+        box-sizing: border-box;
+        padding: 48px;
+    }
+
+    &__game-title {
+        color: $lighter-black;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 59px;
+        letter-spacing: 0px;
+        margin-bottom: 24px;
+    }
+
+    &__desc {
+        color: $lighter-black;
+        @extend %desc-font;
+        margin-bottom: 36px;
+    }
+
+    &__button {
+        border: 1px solid $lighter-black;
+        width: 247px;
+        height: 66px;
+        border-radius: 60px;
+        background: $lighter-black;
+        font: inherit;
+        color: $white;
+        @extend %button-font;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 16px 28px 16px 28px;
+    }
+
+    &__button:hover {
+        border: 1px solid $pure-black;
+        background-color: $white;
+        color: $lighter-black;
+        transition: all 0.5s;
+    }
+}
+
 .footer {
     height: 150px;
-    background-color: #BDED35;
+    background-color: rgb(189, 237, 53);
     text-align: center;
-    margin-top: 144px;
-    color: rgb(0, 0, 0);
+    color: $pure-black;
     font-size: 24px;
     font-weight: 600;
     line-height: 29px;
