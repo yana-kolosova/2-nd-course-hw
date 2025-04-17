@@ -1,3 +1,5 @@
+@import 'vars';
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +8,10 @@
 html,
 body {
     overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
 }
 
 body {
@@ -58,7 +64,10 @@ body {
         padding: 16px 28px 16px 28px;
         font: inherit;
         color: $white;
-        @extend %button-font;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 141.69%;
+        letter-spacing: 0%;
         text-align: center;
     }
 
@@ -108,26 +117,26 @@ body {
     &__content-wrapper_2 {
         align-items: flex-end;
     }
+}
 
-    &__game {
-        width: 378px;
-        border-radius: 30px;
-        background-color: $white;
-        text-decoration: none;
-    }
+.game-card {
+    width: 378px;
+    border-radius: 30px;
+    background-color: $white;
+    text-decoration: none;
 
-    &__game_1,
-    &__game_3 {
+    &_1,
+    &_3 {
         height: 473px;
     }
 
-    &__game_2,
-    &__game_5 {
+    &_2,
+    &_5 {
         height: 512px;
     }
 
-    &__game_4,
-    &__game_6 {
+    &_4,
+    &_6 {
         height: 551px;
     }
 
@@ -175,19 +184,15 @@ body {
         flex-direction: column;
         gap: 32px;
     }
+}
 
-    &__card {
-        height: 500px;
-        width: 1200px;
-        border-radius: 30px;
-        background-color: $white;
-        display: flex;
-        flex-direction: row;
-    }
-
-    &__card:nth-of-type(even) {
-        flex-direction: row-reverse;
-    }
+.game {
+    height: 500px;
+    width: 1200px;
+    border-radius: 30px;
+    background-color: $white;
+    display: flex;
+    flex-direction: row;
 
     &__wrapper {
         width: 600px;
@@ -218,7 +223,10 @@ body {
         background: $lighter-black;
         font: inherit;
         color: $white;
-        @extend %button-font;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 141.69%;
+        letter-spacing: 0%;
         text-align: center;
         box-sizing: border-box;
         padding: 16px 28px 16px 28px;
@@ -230,6 +238,11 @@ body {
         color: $lighter-black;
         transition: all 0.5s;
     }
+
+}
+
+.game:nth-of-type(even) {
+    flex-direction: row-reverse;
 }
 
 .footer {
