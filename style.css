@@ -264,17 +264,13 @@ body {
     line-height: 141.69%;
     letter-spacing: 0%;
   }
+  .header__button:hover {
+    border: 1px solid rgb(32, 32, 39);
+    background: rgb(32, 32, 39);
+    color: rgb(255, 255, 255);
+  }
   .about {
     display: none;
-  }
-  .game__title {
-    text-align: center;
-  }
-  .games__content {
-    flex-direction: row;
-    gap: 32px;
-    flex-wrap: wrap;
-    justify-content: center;
   }
   .games {
     margin-top: 48px;
@@ -287,19 +283,25 @@ body {
     line-height: 49px;
     letter-spacing: 0px;
     margin-bottom: 48px;
+    text-align: center;
   }
   .games__content {
+    flex-direction: row;
+    justify-content: center;
     gap: 24px;
     align-items: center;
+    flex-wrap: wrap;
   }
   .game {
     height: auto;
     width: 343px;
     display: flex;
     flex-direction: column-reverse;
+    align-self: stretch;
     justify-content: flex-end;
   }
   .game__wrapper {
+    height: 100%;
     width: 343px;
     padding: 29px;
     display: flex;
@@ -332,6 +334,7 @@ body {
     font-weight: 600;
     line-height: 141.69%;
     letter-spacing: 0%;
+    margin-top: auto;
   }
   .game__button:hover {
     border: 1px solid rgb(32, 32, 39);
