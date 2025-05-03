@@ -11,10 +11,10 @@ function game1() {
             return;
         }
         else if (playerInput < randomNumber) {
-            alert(`Не угадал! Подсказка: число должно быть больше. ${randomNumber}`);
+            alert("Не угадал! Подсказка: число должно быть больше.");
         }
         else if (playerInput > randomNumber) {
-            alert(`Не угадал! Подсказка: число должно быть меньше. ${randomNumber}`);
+            alert("Не угадал! Подсказка: число должно быть меньше.");
         }
         else {
             alert("Пожалуйста, введите число от 1 до 100!")
