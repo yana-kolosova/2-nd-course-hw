@@ -1,5 +1,5 @@
 function game1() {
-    const randomNumber = Math.ceil(Math.random() * 101);
+    const randomNumber = Math.ceil(Math.random() * 100);
     while (true) {
         let playerInput = Number(prompt("Попробуйте угадать число от 1 до 100:"));
         if (playerInput === 0) {
