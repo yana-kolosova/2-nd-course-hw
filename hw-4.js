@@ -10,10 +10,7 @@ while (i <= 5) {
     i++;
 }
 
-for (i = 0; i <= 22; i++) {
-    if (i < 7) {
-        continue;
-    }
+for (i = 7; i <= 22; i++) {
     console.log(i);
 }
 
@@ -33,9 +30,7 @@ console.log(num);
 
 
 
-for (let firstFri = 1, fri = 1, monthLength = 31; fri <= monthLength; fri++) {
-    if (fri % firstFri === 0) {
-        console.log(`Сегодня пятница, ${fri}-е число. Необходимо подготовить отчет.`);
-        firstFri += 7;
+for (let firstFri = 5; firstFri <= 31; firstFri += 7) {{
+        console.log(`Сегодня пятница, ${firstFri}-е число. Необходимо подготовить отчет.`);
     }
 }
