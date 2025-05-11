@@ -100,9 +100,6 @@ function game2() {
             while (true) {
                 randomA = Math.ceil(Math.random() * 100);
                 randomB = Math.ceil(Math.random() * 99 + 1);
-                if (randomB > randomA) {
-                    [randomA, randomB] = [randomB, randomA]
-                }
                 if (randomA % randomB !== 0) {
                     do {
                         randomA = Math.ceil(Math.random() * 100);
