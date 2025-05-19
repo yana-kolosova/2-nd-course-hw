@@ -125,3 +125,60 @@ function game2() {
             }
     }
 }
+
+function game3() {
+    while (true) {
+        let playerInput = prompt('Введите любой текст, и мы его перевернём:');
+        if (playerInput === null || playerInput === '') {
+            return;
+        }
+        else {
+            playerInput = playerInput.split('');
+            playerInput.reverse();
+            playerInput = playerInput.join('');
+            alert(playerInput);
+        }
+    }
+}
+
+function game5() {
+    const quiz = [
+        {
+            question: "Какого цвета небо?",
+            options: ["1. Красный", "2. Синий", "3. Зеленый"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько дней в неделе?",
+            options: ["1. Шесть", "2. Семь", "3. Восемь"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько у человека пальцев на одной руке?",
+            options: ["1. Четыре", "2. Пять", "3. Шесть"],
+            correctAnswer: 2
+        }
+    ];
+
+    let correctAnswers = 0;
+
+    while (true) {
+        for (let i = 0; i < quiz.length; i++) {
+            playerInput = Number(prompt(`${quiz[i]['question']}
+${quiz[i]['options'][0]}, ${quiz[i]['options'][1]}, ${quiz[i]['options'][2]}`));
+            if (isNaN(playerInput)) {
+                alert('Пожалуйста, введите число!');
+                i--;
+                continue;
+            }
+            else if (playerInput === 0) {
+                break;
+            }
+            else if (playerInput === quiz[i]['correctAnswer']) {
+                correctAnswers++;
+            }
+        }
+        alert(`Количество правильных ответов: ${correctAnswers} из ${quiz.length}`);
+        break;
+    }
+}
