@@ -141,6 +141,105 @@ function game3() {
     }
 }
 
+function game4() {
+    const options = ["камень", "ножницы", "бумага"];
+    const index = Math.floor(Math.random() * 3);
+    let playerInput, computerInput;
+    computerInput = options[index];
+    switch (index) {
+
+        case 0:
+            while (true) {
+                playerInput = prompt(`Введите ваш знак: "${options[0]}", "${options[1]}" или "${options[2]}"`)
+                if (playerInput === options[0]) {
+                    alert(`Что выбрали вы: ${playerInput};
+Что выбрал компьютер: ${computerInput};
+Это ничья!`);
+                    return;
+                }
+                else if (playerInput === options[1]) {
+                    alert(`Что выбрали вы: ${playerInput};
+Что выбрал компьютер: ${computerInput};
+Вы проиграли!`);
+                    return;
+                }
+                else if (playerInput === options[2]) {
+                    alert(`Что выбрали вы: ${playerInput};
+Что выбрал компьютер: ${computerInput};
+Вы выиграли!`);
+                    return;
+                }
+                else if (playerInput === '') {
+                    alert('До встречи!');
+                    return;
+                }
+                else {
+                    alert(`Пожалуйста, введите "${options[0]}", "${options[1]}" или "${options[2]}"`)
+                }
+            }
+
+        case 1:
+            while (true) {
+                playerInput = prompt(`Введите ваш знак: "${options[0]}", "${options[1]}" или "${options[2]}"`)
+                if (playerInput === options[0]) {
+                    alert(`Что выбрали вы: ${playerInput};
+Что выбрал компьютер: ${computerInput};
+Вы выиграли!`);
+                    return;
+                }
+                else if (playerInput === options[1]) {
+                    alert(`Что выбрали вы: ${playerInput};
+Что выбрал компьютер: ${computerInput};
+Это ничья!`);
+                    return;
+                }
+                else if (playerInput === options[2]) {
+                    alert(`Что выбрали вы: ${playerInput};
+Что выбрал компьютер: ${computerInput};
+Вы проиграли!`);
+                    return;
+                }
+                else if (playerInput === '') {
+                    alert('До встречи!');
+                    return;
+                }
+                else {
+                    alert(`Пожалуйста, введите "${options[0]}", "${options[1]}" или "${options[2]}"`)
+                }
+            }
+
+        case 2:
+            while (true) {
+                playerInput = prompt(`Введите ваш знак: "${options[0]}", "${options[1]}" или "${options[2]}"`)
+                if (playerInput === options[0]) {
+                    alert(`Что выбрали вы: ${playerInput};
+Что выбрал компьютер: ${computerInput};
+Вы проиграли!`);
+                    return;
+                }
+                else if (playerInput === options[1]) {
+                    alert(`Что выбрали вы: ${playerInput};
+Что выбрал компьютер: ${computerInput};
+Вы выиграли!`);
+                    return;
+                }
+                else if (playerInput === options[2]) {
+                    alert(`Что выбрали вы: ${playerInput};
+Что выбрал компьютер: ${computerInput};
+Это ничья!`);
+                    return;
+                }
+                else if (playerInput === '') {
+                    alert('До встречи!');
+                    return;
+                }
+                else {
+                    alert(`Пожалуйста, введите "${options[0]}", "${options[1]}" или "${options[2]}"`)
+                }
+            }
+    }
+}
+
 function game5() {
     const quiz = [
         {
